@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {HttpClient} from '@angular/common/http'
 
 @Component({
   selector: 'app-home',
@@ -7,6 +8,12 @@ import { Component } from '@angular/core';
 })
 export class HomePage {
 
-  constructor() {}
+  spruch: string;
+
+  sprueche: Spruch[] = [];
+
+  constructor(private http : HttpClient ) {}
+
+  this.htttp.get('http://www.rasser.eu/api.php')
 
 }
